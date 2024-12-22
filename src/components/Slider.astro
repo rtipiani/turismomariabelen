@@ -5,21 +5,21 @@ const slides = [
         alt: 'Tours, paquetes y traslados con nuestra flota de última generación.',
         title: 'La Magia de Arequipa',
         description: 'Descubre paisajes, cultura y experiencias inolvidables.',
-        whatsappLink: 'https://wa.me/51967288042?text=Hola%20Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
+        whatsappLink: 'https://wa.me/51967288042?text=Hola%20*Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
     },
     {
         src: 'images/slide2.png',
         alt: 'Tours, paquetes y traslados con nuestra flota de última generación.',
         title: 'La Mejor Forma de Viajar',
         description: 'Con nuestra flota moderna y servicios personalizados.',
-        whatsappLink: 'https://wa.me/51967288042?text=Hola%20Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
+        whatsappLink: 'https://wa.me/51967288042?text=Hola%20*Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
     },
     {
         src: 'images/slide3.png',
         alt: 'Tours, paquetes y traslados con nuestra flota de última generación.',
-        title: 'Experiencias Inolvidables con Turismo María Belén',
-        description: 'ransporte y guías de calidad para tus mejores aventuras.',
-        whatsappLink: 'https://wa.me/51967288042?text=Hola%20Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
+        title: 'Experiencias Inolvidables',
+        description: 'Transporte y guias de calidad para tus mejores aventuras.',
+        whatsappLink: 'https://wa.me/51967288042?text=Hola%20*Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
     }
 ];
 ---
@@ -30,16 +30,16 @@ const slides = [
                 <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover" loading={index === 0 ? "eager" : "lazy"} />
 
                 <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12 text-white">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-2 font-winters">
                         Vive
                     </h2>
-                    <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight max-w-[90%] lg:max-w-[75%] mb-4">
+                    <p class="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-light leading-tight max-w-[90%] lg:max-w-[75%] mb-4 font-winters">
                         {slide.title}
                     </p>
-                    <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-[90%] md:max-w-[65%]">
+                    <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-[90%] md:max-w-[65%] font-dots">
                         {slide.description}
                     </p>
-                    <a href={slide.whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-to-br from-primary to-info text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium shadow-md hover:shadow-lg hover:scale-105 transition">
+                    <a href={slide.whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-to-br from-primary to-info text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium border-white border-2 hover:scale-105 transition">
                         Consultar ahora
                         <i class="fa-brands fa-whatsapp text-lg ml-1"></i>
                     </a>
@@ -58,7 +58,7 @@ const slides = [
     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, i) => (
             <button
-                class={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${i === 0 ? "bg-gradient-to-br from-primary to-secondary" : "bg-white opacity-75"}`}
+                class={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${i === 0 ? "bg-gradient-to-br from-primary to-secondary" : "bg-white opacity-85"}`}
                 data-index={i}
                 aria-label={`Ir a la diapositiva ${i + 1}`}
             ></button>
@@ -94,11 +94,11 @@ const slides = [
 
             indicators.forEach((dot, index) => {
                 if (index === currentSlide) {
-                    dot.classList.add("bg-gradient-to-br", "from-primary", "to-secondary");
-                    dot.classList.remove("bg-white", "opacity-75");
+                    dot.classList.add("bg-gradient-to-bl", "from-primary", "to-info");
+                    dot.classList.remove("bg-white", "opacity-85");
                 } else {
-                    dot.classList.add("bg-white", "opacity-75");
-                    dot.classList.remove("bg-gradient-to-br", "from-primary", "to-secondary");
+                    dot.classList.add("bg-white", "opacity-85");
+                    dot.classList.remove("bg-gradient-to-bl", "from-primary", "to-info");
                 }
             });
         };

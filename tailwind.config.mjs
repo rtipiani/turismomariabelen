@@ -7,6 +7,14 @@ export default {
 				primary: '#130746',
 				secondary: '#211263',
 				info: '#301a7e'
+			},
+			fontFamily: {
+				cookies: 'Cookies',
+				covereds: 'Covereds',
+				dots: 'Dots',
+				homes: 'Homes',
+				greats: 'Greats',
+				winters: 'Winters'
 			}
 		},
 	},
