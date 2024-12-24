@@ -27,16 +27,16 @@ const slides = [
     <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
         {slides.map((slide, index) => (
             <div class="relative flex-shrink-0 w-full h-full">
-                <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover" loading={index === 0 ? "eager" : "lazy"} />
+                <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover bg-black/20" loading={index === 0 ? "eager" : "lazy"} />
 
-                <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12 text-white">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-2 font-winters">
+                <div class="absolute inset-0 bg-primary bg-opacity-85 flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12 text-white">
+                    <h2 class="text-3xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-7xl font-extrabold leading-tight tracking-wide mb-1 font-winters">
                         Vive
                     </h2>
-                    <p class="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-light leading-tight max-w-[90%] lg:max-w-[75%] mb-4 font-winters">
+                    <p class="text-3xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-7xl font-extrabold leading-tight tracking-wide mb-4 font-winters">
                         {slide.title}
                     </p>
-                    <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-w-[90%] md:max-w-[65%] font-dots">
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-8 max-w-[90%] lg:max-w-[70%] font-dots">
                         {slide.description}
                     </p>
                     <a href={slide.whatsappLink} target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-to-br from-primary to-info text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium border-white border-2 hover:scale-105 transition">
@@ -48,10 +48,10 @@ const slides = [
         ))}
     </div>
 
-    <button id="prevBtn" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white p-2 sm:p-4 rounded-full opacity-65 hover:opacity-100 hover:scale-105 transition transform" aria-label="Anterior">
+    <button id="prevBtn" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full opacity-35 hover:opacity-85 transition transform" aria-label="Anterior">
         <i class="fas fa-chevron-left text-primary"></i>
     </button>
-    <button id="nextBtn" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white p-2 sm:p-4 rounded-full opacity-65 hover:opacity-100 hover:scale-105 transition transform" aria-label="Siguiente">
+    <button id="nextBtn" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full opacity-35 hover:opacity-85 transition transform" aria-label="Siguiente">
         <i class="fas fa-chevron-right text-primary"></i>
     </button>
 
