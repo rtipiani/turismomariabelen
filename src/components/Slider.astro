@@ -1,24 +1,51 @@
 ---
 const slides = [
     {
-        src: 'images/slide1.webp',
+        src: 'images/slide1-310.webp',
+        srcset: ` 
+            images/slide1-310.webp 310w,
+            images/slide1-749.webp 749w,
+            images/slide1-1200.webp 1200w,
+            images/slide1-1650.webp 1650w,
+            images/slide1-1994.webp 1994w,
+            images/slide1-2180.webp 2180w
+        `,
+        sizes: '103.81vw',
         alt: 'Tours, paquetes y traslados con nuestra flota de última generación.',
         title: 'La Magia de Arequipa',
         description: 'Descubre paisajes, cultura y experiencias inolvidables.',
         whatsappLink: 'https://wa.me/51967288042?text=Hola%20*Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
     },
     {
-        src: 'images/slide2.webp',
+        src: 'images/slide2-310.webp',
+        srcset: `
+            images/slide2-310.webp 310w,
+            images/slide2-749.webp 749w,
+            images/slide2-1200.webp 1200w,
+            images/slide2-1650.webp 1650w,
+            images/slide2-1994.webp 1994w,
+            images/slide2-2180.webp 2180w
+        `,
+        sizes: '103.81vw',
         alt: 'Tours, paquetes y traslados con nuestra flota de última generación.',
         title: 'La Mejor Forma de Viajar',
         description: 'Con nuestra flota moderna y servicios personalizados.',
         whatsappLink: 'https://wa.me/51967288042?text=Hola%20*Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
     },
     {
-        src: 'images/slide3.webp',
+        src: 'images/slide3-310.webp',
+        srcset: `
+            images/slide3-310.webp 310w,
+            images/slide3-749.webp 749w,
+            images/slide3-1200.webp 1200w,
+            images/slide3-1650.webp 1650w,
+            images/slide3-1994.webp 1994w,
+            images/slide3-2180.webp 2180w
+        `,
+        sizes: '103.81vw',
         alt: 'Tours, paquetes y traslados con nuestra flota de última generación.',
         title: 'Experiencias Inolvidables',
-        description: 'Transporte y guias de calidad para tus mejores aventuras.',
+        description: 'Transporte y guías de calidad para tus mejores aventuras.',
         whatsappLink: 'https://wa.me/51967288042?text=Hola%20*Agencia%20de%20Turismo%20Mar%C3%ADa%20Bel%C3%A9n*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos.'
     }
 ];
@@ -27,7 +54,14 @@ const slides = [
     <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
         {slides.map((slide, index) => (
             <div class="relative flex-shrink-0 w-full h-full">
-                <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover bg-black/20" loading={index === 0 ? "eager" : "lazy"} />
+                <img 
+                    src={slide.src} 
+                    srcset={slide.srcset} 
+                    sizes={slide.sizes}
+                    alt={slide.alt} 
+                    class="w-full h-full object-cover bg-black/20" 
+                    loading={index === 0 ? "eager" : "lazy"} 
+                />
 
                 <div class="absolute inset-0 bg-primary bg-opacity-85 flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12 text-white">
                     <h2 class="text-3xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-7xl font-extrabold leading-tight tracking-wide mb-1 font-winters">

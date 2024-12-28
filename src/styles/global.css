@@ -3,29 +3,35 @@
 @font-face {
     font-family: 'Cookies';
     src: url('/fonts/Cookie-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Covereds';
     src: url('/fonts/CoveredByYourGrace-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Dots';
     src: url('/fonts/EduAUVICWANTDots-VariableFont_wght.ttf') format(truetype);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Homes';
     src: url('/fonts/HomemadeApple-Regular.ttf') format(truetype);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Greats';
     src: url('/fonts/GreatVibes-Regular.ttf') format(truetype);
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Winters';
     src: url('/fonts/Winter-Prime.ttf') format(truetype);
+    font-display: swap;
 }
